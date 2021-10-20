@@ -1,7 +1,13 @@
+.container {
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+}
+
 .card-container {
+  width: 1000px;
   display: flex;
   flex-flow: row wrap;
-  height: 1000px;
-  width: 1200px;
-  border: 1px solid black;
+  justify-content: center;
+  padding-top: 10px;
 }

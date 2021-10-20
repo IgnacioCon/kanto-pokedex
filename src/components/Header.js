@@ -1,9 +1,10 @@
 import Title from './Title';
 import Search from './Search';
+import './Header.css';
 
 const Header = () => {
   return (
-    <div>
+    <div className='header-container'>
       <Title />
       <Search />
     </div>
