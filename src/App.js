@@ -6,18 +6,21 @@ import { useEffect } from 'react/cjs/react.development';
 
 const App = () => {
   const [pokemon, setPokemon] = useState([]);
+  const [filteredPokemon, setFilteredPokemon] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     const getPokemon = async () => {
       const pokemonFromAPI = await fetchPokemon();
       setPokemon(pokemonFromAPI);
+      setFilteredPokemon(pokemonFromAPI);
     };
     getPokemon();
   }, []);
 
   //fetch pokemon
   const fetchPokemon = async () => {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=3');
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
     const data = await response.json();
 
     const fetchedPokemon = [];
@@ -31,10 +34,25 @@ const App = () => {
     return fetchedPokemon;
   };
 
+  const filterPokemon = (termToSearch) => {
+    const searchTerm = termToSearch.toString().toLowerCase().trim();
+    if (searchTerm === '') {
+      setSearch(termToSearch);
+      setFilteredPokemon(pokemon);
+      return;
+    }
+    const filtered = pokemon.filter((pokemon) =>
+      pokemon.name.toLowerCase().includes(searchTerm)
+    );
+
+    setSearch(termToSearch);
+    setFilteredPokemon(filtered);
+  };
+
   return (
     <div>
-      <Header />
-      <PokemonList pokemonArray={pokemon} />
+      <Header search={search} filterPokemon={filterPokemon} />
+      <PokemonList pokemonArray={filteredPokemon} />
     </div>
   );
 };

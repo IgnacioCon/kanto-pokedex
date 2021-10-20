@@ -2,11 +2,11 @@ import Title from './Title';
 import Search from './Search';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ search, filterPokemon }) => {
   return (
     <div className='header-container'>
       <Title />
-      <Search />
+      <Search search={search} filterPokemon={filterPokemon} />
     </div>
   );
 };
