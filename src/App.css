@@ -1,0 +1,11 @@
+html {
+  box-sizing: content-box;
+}
+
+html * {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #eee;
+}
