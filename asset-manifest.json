@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/kanto-pokedex/static/css/main.f3fbe0b5.chunk.css",
+    "main.js": "/kanto-pokedex/static/js/main.e9b7f560.chunk.js",
+    "main.js.map": "/kanto-pokedex/static/js/main.e9b7f560.chunk.js.map",
+    "runtime-main.js": "/kanto-pokedex/static/js/runtime-main.e0e06783.js",
+    "runtime-main.js.map": "/kanto-pokedex/static/js/runtime-main.e0e06783.js.map",
+    "static/js/2.07e662ff.chunk.js": "/kanto-pokedex/static/js/2.07e662ff.chunk.js",
+    "static/js/2.07e662ff.chunk.js.map": "/kanto-pokedex/static/js/2.07e662ff.chunk.js.map",
+    "static/js/3.da9c7817.chunk.js": "/kanto-pokedex/static/js/3.da9c7817.chunk.js",
+    "static/js/3.da9c7817.chunk.js.map": "/kanto-pokedex/static/js/3.da9c7817.chunk.js.map",
+    "index.html": "/kanto-pokedex/index.html",
+    "static/css/main.f3fbe0b5.chunk.css.map": "/kanto-pokedex/static/css/main.f3fbe0b5.chunk.css.map",
+    "static/js/2.07e662ff.chunk.js.LICENSE.txt": "/kanto-pokedex/static/js/2.07e662ff.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e0e06783.js",
+    "static/js/2.07e662ff.chunk.js",
+    "static/css/main.f3fbe0b5.chunk.css",
+    "static/js/main.e9b7f560.chunk.js"
+  ]
+}
