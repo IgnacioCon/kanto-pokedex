@@ -37,6 +37,11 @@
   align-items: center;
   justify-content: center;
   height: 40px;
+  text-transform: capitalize;
+}
+
+.pokemon-name h3 {
+  padding-top: 4px;
 }
 
 .pokemon-types {

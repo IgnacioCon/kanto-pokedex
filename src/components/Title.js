@@ -1,5 +1,5 @@
 const Title = () => {
-  return <h1>Pokedex App</h1>;
+  return <h1>Kanto Pok&eacute;dex</h1>;
 };
 
 export default Title;
