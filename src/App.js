@@ -5,9 +5,7 @@ const App = () => {
   return (
     <div>
       <Header />
-      <section className='container'>
-        <PokemonList />
-      </section>
+      <PokemonList />
     </div>
   );
 };
