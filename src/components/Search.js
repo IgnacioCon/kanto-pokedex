@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import { useEffect } from 'react';
 
 const Search = ({ search, filterPokemon }) => {
   const inputRef = useRef();

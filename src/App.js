@@ -1,9 +1,7 @@
 import Header from './components/Header';
 import PokemonList from './components/PokemonList';
 import './App.css';
-import { useState } from 'react';
-import { useEffect } from 'react/cjs/react.development';
-
+import { useState, useEffect } from 'react';
 const App = () => {
   const [pokemon, setPokemon] = useState([]);
   const [filteredPokemon, setFilteredPokemon] = useState([]);
