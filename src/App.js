@@ -21,15 +21,15 @@ const App = () => {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
     const data = await response.json();
 
-    const fetchedPokemon = [];
-    for (let index = 0; index < data.results.length; index++) {
-      const res = await fetch(data.results[index].url);
-      const pkmn = await res.json();
-      const { id, name, height, weight, sprites, types } = pkmn;
-      const newPokemon = { id, name, height, weight, sprites, types };
-      fetchedPokemon.push(newPokemon);
-    }
-    return fetchedPokemon;
+    return await Promise.all(data.results.map((x) => fetchAllPokemon(x.url)));
+  };
+
+  const fetchAllPokemon = async (url) => {
+    const req = await fetch(url);
+    const pkmn = await req.json();
+    const { id, name, height, weight, sprites, types } = pkmn;
+
+    return { id, name, height, weight, sprites, types };
   };
 
   const filterPokemon = (termToSearch) => {
